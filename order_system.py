@@ -114,7 +114,6 @@ def update_order(order, menu_selection, menu_items):
     # to an integer and prints an error message if it does not
      
     # Try to convert the input to an integer
-
     customer_input = input("Please enter the menu item number: ")
 
     # Check if the customer's input string can be converted to an integer
@@ -153,8 +152,15 @@ except ValueError:
             # Store the item name as a variable
        # Prompt the user to enter an item name
 item_name = input("Please enter the item you want to order: ")
+# Example of getting user input for selection
+menu_selection = input(
+    "Select an item  number (0 is Pizza, 1 is Burger, 2 is Salad, 3 is Pasta):"
+)
 
 # Check if the item is on the menu
+menu_items = ("Pizza", "Burger", "Salad", "Pasta")
+
+item_name = menu_items[int(menu_selection)]
 if item_name in menu_items:
     print(f"You have selected: {item_name}")
 else:
@@ -174,7 +180,10 @@ item_name = input("Please enter the item you want to order: ")
 # Check if the item is on the menu
 if item_name in menu_items:
     # Prompt for quantity
-    quantity = input(f"You have selected: {item_name}. How many would you like to order? ")
+    quantity = input(
+        
+        f"You have selected: {item_name}. How many would you like to order? "
+    )
     print(f"You have ordered {quantity} of {item_name}.")
 else:
     print("Error: Item not on the menu! Please select a valid menu item.")
@@ -282,9 +291,9 @@ print(order_list)
 
     # TODO: Return the updated order
     
-   order_list = []
-updated_order = update_order(order_list, item_name, price, quantity)
-print(updated_order)
+order_list = []
+order_list = update_order(order_list, item_name, price, quantity)
+print(order_list)
    
     
 

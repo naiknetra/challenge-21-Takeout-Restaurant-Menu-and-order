@@ -125,7 +125,7 @@ def update_order(order, menu_selection, menu_items):
 
     # Continue with the rest of the function logic
     # For example, check if the menu_selection is valid
-    if menu_selection not in range(1, len(menu_items) + 1):
+    if menu_selection not in range(1, (menu_items) + 1):
         print("Error: Please select a valid menu item.")
     else:
         # Proceed with the order update logic
@@ -175,7 +175,7 @@ else:
             # TODO: A prompt (input) to the customer that prints the name of the 
             # menu item to the user and asks the quantity they would like to order.
            # Prompt the user to enter an item name
-item_name = input("Please enter the item you want to order: ")
+
 
 # Check if the item is on the menu
 if item_name in menu_items:
@@ -232,7 +232,6 @@ else:
             # Try to convert the input to an integer
             # If conversion fails, default to 1
             # Prompt the user to enter an item name
-item_name = input("Please enter the item you want to order: ")
 
 # Check if the item is on the menu
 if item_name in menu_items:
@@ -292,7 +291,7 @@ print(order_list)
     # TODO: Return the updated order
     
 order_list = []
-order_list = update_order(order_list, item_name, price, quantity)
+order_list = update_order(item_name, price, quantity)
 print(order_list)
    
     

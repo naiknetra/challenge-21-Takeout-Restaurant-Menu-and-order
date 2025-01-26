@@ -334,7 +334,7 @@ def place_order():
     # Check if the item is on the menu
     if item_name in menu_items:
         # Prompt for quantity and store it in a variable
-        quantity = input(f"You have selected: {item_name}. How many would you like to order? ")
+        quantity = input(f"You have selected: {item_name} How many would you like to order? ")
         
         # Attempt to convert the quantity to an integer
         try:
@@ -538,7 +538,7 @@ if __name__ == "__main__":
     # Get the menu dictionary
     meals = get_menu_dictionary()
 
-    receipt, total_price = place_order
+    receipt, total_price = place_order(meals)
 
     # Print out the customer's order
     print("This is what we are preparing for you.\n")

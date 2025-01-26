@@ -160,21 +160,12 @@ menu_selection = input(
 # Check if the item is on the menu
 menu_items = ("Pizza", "Burger", "Salad", "Pasta")
 
-item_name = menu_items[int(menu_selection)]
+#
 if item_name in menu_items:
     print(f"You have selected: {item_name}")
 else:
     print("Error: Item not on the menu! Please select a valid menu item.")
-            #In this code:
-
-            #A list of menu_items is defined, containing the names of the items available.
-            #The program prompts the user to enter the name of the item they want to order.
-            #It checks if the entered item_name is in the menu_items list using the in keyword.
-            #If the item is found in the menu, it confirms the selection. If not, it prints an error message indicating that the item is not on the menu.
-
-            # TODO: A prompt (input) to the customer that prints the name of the 
-            # menu item to the user and asks the quantity they would like to order.
-           # Prompt the user to enter an item name
+           
 
 
 # Check if the item is on the menu
@@ -188,16 +179,6 @@ if item_name in menu_items:
 else:
     print("Error: Item not on the menu! Please select a valid menu item.")
 
-            #In this code:
-
-            #A list of menu_items is defined, containing the names of the items available.
-#The program prompts the user to enter the name of the item they want to order.
-#It checks if the entered item_name is in the menu_items list.
-#If the item is found, it prompts the user for the quantity they would like to order, displaying the selected item in the prompt.
-#Finally, it confirms the order by printing the quantity and item name. If the item is not on the menu, it prints an error message.
-
-            # Store the return in a quantity variable
-            # Prompt the user to enter an item name
 item_name = input("Please enter the item you want to order: ")
 
 # Check if the item is on the menu
@@ -557,7 +538,7 @@ if __name__ == "__main__":
     # Get the menu dictionary
     meals = get_menu_dictionary()
 
-    receipt, total_price = place_order(meals)
+    receipt, total_price = place_order
 
     # Print out the customer's order
     print("This is what we are preparing for you.\n")

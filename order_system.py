@@ -31,7 +31,7 @@ def place_order(menu):
     # TODO: Create a continuous while loop so customers can order multiple items
     while place_order: 
         print ("What is your order?")
-        i=1
+        i = 1
     
         # TODO: Loop through the menu dictionary, extracting the food category and
         # the options for each category
@@ -83,7 +83,7 @@ def place_order(menu):
 
             # TODO: Create an order_total from the prices list using sum()
             # and round the prices to 2 decimal places.
-            order_total = round(sum(prices_list),2)
+            order_total = round(sum(prices_list), 2)
 
             # Write a break statement or set the condition to False to exit
             # the ordering loop
@@ -92,7 +92,6 @@ def place_order(menu):
 
     # TODO: Return the order list and the order total
     return order, order_total
-    
 
 
 def update_order(order, menu_selection, menu_items):
@@ -195,24 +194,6 @@ if item_name in menu_items:
 else:
     print("Error: Item not on the menu! Please select a valid menu item.")
 
-            #In this code:
-
-            #he program prompts the user to enter the name of the item they want to order.
-            #It checks if the entered item_name is in the menu_items list.
-            #If the item is found, it prompts the user for the quantity and stores the input in the quantity variable.
-            #It attempts to convert the quantity to an integer. If the conversion is successful, it confirms the order. If not, it prints an error message indicating that the input was invalid.
-            #If the item is not on the menu, it prints an error message.
-
-
-
-            
-
-            # TODO: Write a conditional statement that checks if the input quantity 
-            # can be converted to an integer, then converts it to an integer. 
-            # Have it default to 1 if it does not.
-            # Try to convert the input to an integer
-            # If conversion fails, default to 1
-            # Prompt the user to enter an item name
 
 # Check if the item is on the menu
 if item_name in menu_items:
@@ -241,15 +222,15 @@ else:
 order_list = []
 
 # Example values for item name, price, and quantity
-item_name = "Sample Item"
-price = 10.99
-quantity = 2
+#item_name = "Sample Item"
+#price = 10.99
+#quantity = 2
 
 # Create a dictionary with the specified keys
 order_item = {
     "Item name": item_name,
-    "Price": price,
-    "Quantity": quantity
+    "Price": 10.99,
+    "Quantity": 2
 }
 
 # Add the dictionary to the order list
@@ -257,22 +238,14 @@ order_list.append(order_item)
 
 # Print the order list to verify
 print(order_list)
-            #In this code:
-
-            #An empty order_list is initialized.
-            #An example item name, price, and quantity are defined.
-            #A dictionary named order_item is created with the keys "Item name", "Price", and "Quantity".
-            #The dictionary is appended to the order_list.
-            #Finally, the order list is printed to verify that the item has been added correctly.
-
-
-
-            
-
+           
     # TODO: Return the updated order
     
 order_list = []
-order_list = update_order(item_name, price, quantity)
+
+# Define the price variable before calling update_order
+price = menu_items[item_name]['Price']
+order_list = update_order(order_list, item_name, price, quantity)
 print(order_list)
    
     
@@ -327,7 +300,7 @@ def print_receipt_line(item_name, price, quantity):
     total_price = price * quantity
     print(f"{quantity} x {item_name} @ ${price:.2f} each = ${total_price:.2f}")
 
-def place_order():
+
     # Prompt the user to enter an item name
     item_name = input("Please enter the item you want to order: ")
 
@@ -353,7 +326,7 @@ def place_order():
         print("Error: Item not on the menu! Please select a valid menu item.")
 
 # Example usage
-place_order()
+print_receipt_line("Burger", 5.99, 2)
         
         
 
@@ -551,4 +524,5 @@ if __name__ == "__main__":
 
     # Print the receipt footer with the total price
     print_receipt_footer(total_price)
+
 
